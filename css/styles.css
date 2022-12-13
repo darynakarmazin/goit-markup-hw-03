@@ -18,6 +18,10 @@ img {
   max-width: 100%;
   height: auto;
 }
+p {
+  padding: 0;
+  margin: 0;
+}
 .link {
   text-decoration: none;
 }
@@ -113,21 +117,24 @@ body {
 }
 .site-nav .link {
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 .header-section {
-  border-bottom: 1px solid #ececec;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 /* ========== Main banner (hero) ==========*/
 .hero {
   background-color: var(--primary-title);
+  padding-top: 192px;
+  padding-bottom: 192px;
   text-align: center;
 }
 .hero .hero-title {
-  padding-top: 192px;
-  margin-top: 0;
-  margin-bottom: 48px;
+  max-width: 495px;
+  margin: 0 auto 48px auto;
+
   font-weight: 600;
   font-size: 56px;
   line-height: 1.07;
@@ -138,11 +145,11 @@ button {
   cursor: pointer;
   font-family: inherit;
   font-size: inherit;
+  border: none;
 }
 .hero .hero-btn {
   /* font-family: Roboto, sans-serif;
   font-size: 16px; */
-  margin-bottom: 192px;
   display: inline-block;
   padding: 16px 32px;
   text-align: center;
@@ -172,6 +179,7 @@ button {
 }
 .features-list {
   display: flex;
+  margin-right: -24px;
 }
 .section-title {
   margin-top: 0;
@@ -210,10 +218,8 @@ button {
   margin-bottom: 0;
 }
 .features-list .item {
+  flex-basis: calc(100% / 4 - 24px);
   margin-right: 24px;
-}
-.features-list .item:last-child {
-  margin-right: 0;
 }
 /* ========== What are we doing ========== */
 .work-list {
@@ -262,11 +268,12 @@ button {
 /* footer */
 footer {
   background-color: var(--primary-title);
+  padding: 100px 0px;
 }
 .logo-footer {
   color: #f4f4fd;
 }
-.footer .logo {
+.logotype {
   margin-top: 0;
   margin-bottom: 8px;
 }
@@ -276,11 +283,10 @@ footer {
   color: #e7e9fc;
 }
 .footer-block {
-  padding: 100px 0px;
   width: 264px;
 }
 /* ========== Portfolio =========== */
-.portfolio-section{
+.portfolio-section {
   padding-top: 96px;
 }
 .site-filter {
@@ -328,13 +334,11 @@ footer {
   /* width: 370px; */
   margin-right: 24px;
   margin-bottom: 48px;
-  
+  border: 0.5px solid #f4f4fd;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .portfolio-list .titte-card {
   padding: 24px 20px;
-  border: 0.5px solid #F4F4FD;
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
-  border-top: 0;
 }
 .portfolio-list .title {
   margin-top: 0;
